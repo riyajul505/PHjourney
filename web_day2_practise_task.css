@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+}
+#Practise-Task-1{
+    border: 1px solid tomato;
+    margin: 10px;
+}
+#Practise-Task-2{
+    border: 1px solid tomato;
+    margin: 10px;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+}
+.Practise-3-paragraph{
+    background-color: blanchedalmond;
+    padding: 5px;
+    text-align: center;
+    font-style: normal;
+}
+#Practise-Task-3{
+    border-top: 10px solid tomato;
+    border-left: 10px solid tomato;
+    margin: 50px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 10px 10px 10px 10px rgb(209, 110, 110);
+}
+#Practise-Task-6{
+    border: 5px solid burlywood;
+    margin: 20px;
+
+}
+#read-more{
+    font-size: larger;
+    /* font-style: italic; */
+    text-decoration: none;
+}
