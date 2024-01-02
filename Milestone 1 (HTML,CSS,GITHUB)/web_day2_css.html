@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploring CSS</title>
+    <link rel="stylesheet" href="web_day2_css.css">
     <style>
         *{
             margin: 0;
@@ -26,19 +27,20 @@
         }
         .border{
             background-color: aqua;
-            border: 5px solid black;
+            /* border: 5px solid black;
             border-radius: 5px;
             border-bottom: none;
             border-right: none;
             margin-top: 10px;
             margin-right: 500px;
-            padding: 20px;
+            padding: 20px; */
         }
     </style>
 </head>
 <body>
+    <header class="header">Welcome to my developer world</header>
     <h3 style="color: yellowgreen;">Trying Inline CSS</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fugiat eum voluptatum ad voluptatibus dolor recusandae porro minus, veniam numquam dicta quod, dignissimos officia ullam tempore ab voluptatem, provident vero.</p>
+    <p>Lorem ipsum dolor sit amet <span class="inline">consectetur</span> adipisicing elit. Cupiditate fugiat eum voluptatum ad voluptatibus dolor recusandae porro minus, veniam numquam dicta quod, dignissimos officia ullam tempore ab voluptatem, provident vero.</p>
     <p id="align" class="bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo excepturi amet ipsum laboriosam! Cum architecto tempore eligendi totam aliquid minima id minus, et placeat est obcaecati suscipit, repellat perspiciatis eos.</p>
     <ul>
         <li class="player bold">Inline</li>
@@ -56,7 +58,7 @@
         <h2>My first blog</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloribus sapiente rem illum hic beatae animi illo quod distinctio numquam similique, tempore, corrupti sit commodi. Ut nulla magnam modi tempore.</p>
     </div>
-    <div class="border">
+    <div class="border hide">
         <h2>My Second blog</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloribus sapiente rem illum hic beatae animi illo quod distinctio numquam similique, tempore, corrupti sit commodi. Ut nulla magnam modi tempore.</p>
     </div>
