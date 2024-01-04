@@ -1,0 +1,16 @@
+nav > ul{
+    display: flex;
+}
+nav li{
+    text-align: center;
+    list-style: none;
+    margin-right: 10px;
+
+}
+nav li:hover{
+    color: lightgray;
+}
+footer{
+    text-align: center;
+    margin-top: 30px;
+}
