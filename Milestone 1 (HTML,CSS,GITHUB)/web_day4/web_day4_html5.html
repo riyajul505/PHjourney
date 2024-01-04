@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating an article</title>
+    <link rel="stylesheet" href="web_day4_css.css" />
+    <style>
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      table {
+        /* border-collapse: collapse; */
+        border-style: double;
+      }
+      td,
+      th {
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is the beginning of header part. -->
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Blog</li>
+          <li>About Us</li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Ending of Header part. -->
+
+    <main>
+      <!-- <article>
+            <header>
+                <h2>Trip was charming</h2>
+                <p>Publish on: <time datetime="04-01-2024"> 04 January 2024</time> </p>
+            </header>
+            <figure>
+                <img src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="" srcset="">
+                <figcaption>Girl Capturing photo</figcaption>
+            </figure>
+            <section>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam officiis laudantium corrupti eius quod, eum adipisci, doloremque voluptate, accusamus repudiandae a facere odio blanditiis mollitia eos tempore quis temporibus qui?</p>
+            </section>
+            <section><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero tempora omnis sequi! Asperiores repellat nam quia numquam, eveniet illum commodi possimus laudantium amet accusantium magni unde magnam animi libero!</p>
+            </section>
+            <footer><p>Tags: Sky Travel</p></footer>
+            
+        </article> -->
+
+      <!-- <section>
+            <h2>Fill up this form</h2>
+            <form>
+                <label for="name">Your name: <input placeholder="Your name" type="text"></label>
+                <label for="email">Email: <input type="email" name="" id=""></label>
+                <fieldset>
+
+                    <legend>Pick one number</legend>
+                    <label for="69">69<input type="radio" name="69"></label>
+
+                    <label for="58">58 <input type="radio" name="69" id=""></label>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Pick one Girl</legend>
+                    <label for="Danny">Danny <input type="checkbox"></label>
+
+                    <label for="Valentina">Valentina <input type="checkbox"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Instruction</legend>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </fieldset>
+                <input type="reset">
+                <input type="submit">
+            </form>
+        </section> -->
+
+      <section>
+        <table>
+          <caption>
+            Eployee status
+          </caption>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Bill gates</td>
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td rowspan="2">Larry Page</td>
+              <td>$50</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <!-- <td>Larry</td> -->
+              <td>200$</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total salary: 400$</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p><small> &copy; 2029 All rights reserved.</small></p>
+    </footer>
+  </body>
+</html>
