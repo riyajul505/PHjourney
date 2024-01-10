@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+}
+.practise-1{
+    width: 95vw;
+    height: 95vh;
+    border: 2px solid aqua;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% repeat(1,1fr);
+    /* justify-content: center;
+    align-items: center; */
+}
+.column1{
+    border: 1px solid black;
+    /* width: 30%; */
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.column2{
+    border: 1px solid black;
+    /* width: 70%; */
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.practise-2{
+    width: 95vw;
+    height: 95vh;
+    /* border: 2px solid red; */
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.column-p2-1{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: blueviolet;
+    margin-right: 5px;
+}
+.column-p2-2{
+    border: 1px solid aquamarine;
+    display: grid;
+    grid-template-rows: 50%;
+    /* justify-content: center;
+    align-items: center; */
+    font-size: 2rem;
+}
+
+.column-p2-22{
+    background-color: tomato; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+} 
+.column-p2-34{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+.column-p2-3{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.column-p2-4{
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 567px) {
+    .practise-1{
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+    }
+    .practise-2{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+    .column-p2-2{
+        grid-template-columns: 100%;
+        grid-template-rows: 100% 100%;
+    }
+    .column-p2-34{
+        grid-template-columns: 100%;
+        grid-template-rows: 100% 100%;
+    }
+}
