@@ -83,6 +83,24 @@ body{
     align-items: center;
 }
 
+.article{
+    width: 95vw;
+    height: 95vh;
+    /* border: 2px solid red; */
+    margin: auto;
+    /* display: grid;
+    grid-template-columns: 50% 50%; */
+}
+.article1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 10px;
+}
+.article2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 
 @media screen and (max-width: 567px) {
     .practise-1{
@@ -101,4 +119,18 @@ body{
         grid-template-columns: 100%;
         grid-template-rows: 100% 100%;
     }
+
+    .article1{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+    .article2{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+    .article-1-img img{
+        width: 100%;
+        /* height: 100%; */
+    }
+
 }
