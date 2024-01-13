@@ -1,104 +1,192 @@
-body{
-    font-family: 'Work Sans', sans-serif;
-    margin: 0;
-    max-width: 90rem;
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  max-width: 90rem;
+}
+main {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* Header style */
-.header{
-    background: rgba(255, 144, 14, 0.10);
-    padding: 20px 100px;
+.header {
+  background: rgba(255, 144, 14, 0.1);
+  padding: 20px 100px;
 }
 
-.header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header img{
-    width: 100%;
-    margin-top: 20px;
+header img {
+  width: 100%;
+  margin-top: 20px;
 }
-.header nav>ul{
-    display: flex;
+.header nav > ul {
+  display: flex;
 }
-header ul li{
-    list-style: none;
-    margin-right: 15px;
-    justify-content: center;
-
-}
-
-.section-tittle{
-    color: #131313;
-    font-size: 2.8rem;
-    font-weight: 700;
+header ul li {
+  list-style: none;
+  margin-right: 15px;
+  justify-content: center;
 }
 
-.banner-content{
+.section-tittle {
+  color: #131313;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.banner-content {
+  margin: auto;
+  width: 50rem;
+  text-align: center;
+}
+.banner-content h1 {
+  color: #131313;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.text-light-gray {
+  color: #727272;
+  line-height: 1.6rem;
+}
+.btn-primary {
+  width: 11.25rem;
+  height: 4rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #ff900e;
+  cursor: pointer;
+}
+
+.team-photo-quick-feature {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 5rem;
+  padding: 20px 100px;
+}
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.quick-feature {
+  justify-content: center;
+  align-items: center;
+  margin-top: 8.8rem;
+}
+.quick-feature h2 {
+  color: #131313;
+  font-size: 2.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.feature-will-love-photo {
+  display: flex;
+  gap: 54px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 100px;
+  margin: 50px 0;
+}
+.features-list {
+  width: 586px;
+}
+.feature-div {
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+.feature-main-tittle {
+  border-left: 5px solid #ff900e;
+  padding: 10px;
+}
+.feature-tittle {
+  color: #131313;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.photo-10yr img {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.years-of-experiences {
+  border-radius: 8px;
+  background: #ff900e;
+  width: 342px;
+  height: 200px;
+  position: relative;
+  bottom: 150px;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding: 20px;
+  }
+  .header nav,
+  .team-photo-quick-feature {
+    flex-direction: column;
+  }
+  .section-tittle {
+    font-size: 1.5rem;
+  }
+  .banner-content {
     margin: auto;
-    width: 50rem;
+    width: auto;
     text-align: center;
-}
-.banner-content h1{
-    color:  #131313;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.25rem;
-}
-.text-light-gray{
-    color:  #727272;
-    line-height: 1.625rem; 
-}
-.btn-primary{
-    width: 11.25rem;
-    height: 4rem;
-    border: 0;
-    border-radius: 0.5rem;
-    background: #FF900E;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:576px) {
-    .header{
-        padding: 20px;
-    }
-    .header nav{
-        flex-direction: column;
-    }
-    .section-tittle{
-        font-size: 1.8rem;
-    }
-    .banner-content {
-        margin: auto;
-        width: auto;
-        text-align: center;
-    }
+  }
+  .team-photo-quick-feature {
+    padding: 43px;
+    margin: auto;
+    gap: 0px;
+  }
+  .photo-collage {
+    grid-template-columns: 1fr;
+  }
+  .quick-feature {
+    margin-top: 0rem;
+  }
+  .feature-will-love-photo {
+    display: flex;
+    gap: 54px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .features-list {
+    width: 400px;
+  }
+  .photo-10yr img {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 
-
-@media screen and (min-width:576px) and (max-width:992px) {
-    .header{
-        padding: 30px;
-    }
-    .header nav{
-        flex-direction: column;
-    }
-    .banner-content{
-        width: auto;
-    }
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .header {
+    padding: 30px;
+  }
+  .header nav,
+  .team-photo-quick-feature {
+    flex-direction: column;
+  }
+  .banner-content {
+    width: auto;
+  }
+  .quick-feature {
+    margin-top: 0;
+  }
 }
