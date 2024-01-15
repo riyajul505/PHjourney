@@ -207,6 +207,48 @@ main h1 {
   justify-content: center;
   align-items: center;
 }
+.gear-container{
+  display: flex;
+  margin-top: 50px;
+  gap: 90px;
+}
+footer{
+  background-color: rgba(10, 8, 38, 1);
+  height: 239px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer-content{
+  /* margin-top: 20px; */
+}
+.footer-tittle{
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.footer-content p{
+  color: #D9DBE1;
+
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.footer-content img{
+  width: 30px;
+  margin: 5px;
+}
+
+
+
 
 @media screen and (max-width: 576px) {
   header {
@@ -302,6 +344,75 @@ main h1 {
     margin-left: 16px;
   }
   main {
-    padding: 50px 100px;
+    padding: 50px;
+  }
+  .gear-container{
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .gear-photo img{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:576.1px) and (max-width:992px) {
+  header nav{
+    flex-direction: column-reverse;
+  }
+  .header-content{
+    margin-top: 66px;
+    flex-direction: column-reverse;
+    margin-bottom: 29px;
+  }
+  .header-tittle{
+    margin-top: 50px;
+    text-align: center;
+  }
+  .header-tittle h1{
+    margin: 2px;
+  }
+  .header-tittle p{
+    margin-right: auto;
+  }
+  .header-photo{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-photo .Circle-for-camera{
+    display: block;
+  }
+  .main-camera{
+    top: auto;
+    right: auto;
+  }
+  header svg{
+    display: none;
+  }
+  .sponsors{
+    flex-wrap: wrap;
+  }
+  main{
+    padding: 10px;
+  }
+  .items{
+    height: auto;
+    width: auto;
+  }
+  .gear-container{
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+  }
+  .items-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: auto;
+  }
+  .gear-details{
+    width: 70%;
   }
 }
