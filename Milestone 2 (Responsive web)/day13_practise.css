@@ -207,12 +207,12 @@ main h1 {
   justify-content: center;
   align-items: center;
 }
-.gear-container{
+.gear-container {
   display: flex;
   margin-top: 50px;
   gap: 90px;
 }
-footer{
+footer {
   background-color: rgba(10, 8, 38, 1);
   height: 239px;
   display: flex;
@@ -220,19 +220,19 @@ footer{
   align-items: center;
   text-align: center;
 }
-.footer-content{
+.footer-content {
   /* margin-top: 20px; */
 }
-.footer-tittle{
-  color: #FFF;
+.footer-tittle {
+  color: #fff;
   font-family: Poppins;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 3px;
 }
 
-.footer-content p{
-  color: #D9DBE1;
+.footer-content p {
+  color: #d9dbe1;
 
   font-family: Manrope;
   font-size: 14px;
@@ -242,13 +242,10 @@ footer{
   margin-top: 3px;
   margin-bottom: 3px;
 }
-.footer-content img{
+.footer-content img {
   width: 30px;
   margin: 5px;
 }
-
-
-
 
 @media screen and (max-width: 576px) {
   header {
@@ -340,79 +337,79 @@ footer{
   .items-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .items{
+  .items {
     margin-left: 16px;
   }
   main {
     padding: 50px;
   }
-  .gear-container{
+  .gear-container {
     flex-direction: column-reverse;
     text-align: center;
     gap: 30px;
     justify-content: center;
     align-items: center;
   }
-  .gear-photo img{
+  .gear-photo img {
     width: 100%;
   }
 }
 
-@media screen and (min-width:576.1px) and (max-width:992px) {
-  header nav{
+@media screen and (min-width: 576.1px) and (max-width: 992px) {
+  header nav {
     flex-direction: column-reverse;
   }
-  .header-content{
+  .header-content {
     margin-top: 66px;
     flex-direction: column-reverse;
     margin-bottom: 29px;
   }
-  .header-tittle{
+  .header-tittle {
     margin-top: 50px;
     text-align: center;
   }
-  .header-tittle h1{
+  .header-tittle h1 {
     margin: 2px;
   }
-  .header-tittle p{
+  .header-tittle p {
     margin-right: auto;
   }
-  .header-photo{
+  .header-photo {
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .header-photo .Circle-for-camera{
+  .header-photo .Circle-for-camera {
     display: block;
   }
-  .main-camera{
+  .main-camera {
     top: auto;
     right: auto;
   }
-  header svg{
+  header svg {
     display: none;
   }
-  .sponsors{
+  .sponsors {
     flex-wrap: wrap;
   }
-  main{
+  main {
     padding: 10px;
   }
-  .items{
+  .items {
     height: auto;
     width: auto;
   }
-  .gear-container{
+  .gear-container {
     flex-direction: column;
     gap: 0;
     text-align: center;
   }
-  .items-container{
-    grid-template-columns: repeat(2,1fr);
+  .items-container {
+    grid-template-columns: repeat(2, 1fr);
     gap: auto;
   }
-  .gear-details{
+  .gear-details {
     width: 70%;
   }
 }
