@@ -1,0 +1,472 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daisy UI</title>
+    <!-- Daisy Khala setup -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font setup -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-popins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <!-- Tailwind custom code -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-bg": "#E76F51",
+              "background-primary": "rgba(231, 111, 81, 0.10)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-popins">
+    <header class="md:container md:mx-auto">
+      <nav>
+        <div class="navbar">
+          <div class="navbar-start w-full">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 items-center text-base font-medium shadow bg-base-100 rounded-box w-52 justify-center"
+              >
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>News</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="text-4xl font-bold">Biker Zone</a>
+          </div>
+          <div class="navbar-center items-center hidden lg:flex">
+            <ul
+              class="menu items-center text-base font-medium menu-horizontal px-1"
+            >
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>Contact</a></li>
+              <div class="">
+                <a class="btn text-white bg-primary-bg">Login</a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Carousel -->
+      <div class="carousel w-full h-[550px] bg-background-primary">
+        <!-- slider 1 -->
+        <div id="slide1" class="carousel-item relative w-full">
+          <div class="hero">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <img
+                src="day18_images/slider/bike1.png"
+                class="max-w-sm rounded-lg"
+              />
+              <div>
+                <h1 class="text-5xl font-bold">Box Office News!</h1>
+                <p class="py-6 lg:w-[440px]">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn text-white bg-primary-bg">Purchase</button>
+              </div>
+            </div>
+          </div>
+          <!-- <img
+            src="day18_images/slider/bike1.png"
+            class="w-full"
+          /> -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slider 2 -->
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class="hero">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <img
+                src="day18_images/slider/bike2.png"
+                class="max-w-sm rounded-lg"
+              />
+              <div>
+                <h1 class="text-5xl font-bold">Box Office News!</h1>
+                <p class="py-6 w-[440px]">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn text-white bg-primary-bg">Purchase</button>
+              </div>
+            </div>
+          </div>
+          <!-- <img
+            src="day18_images/slider/bike2.png"
+            class="w-full"
+          /> -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slider 3 -->
+        <div id="slide3" class="carousel-item relative w-full">
+          <div class="hero">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <img
+                src="day18_images/slider/bike3.png"
+                class="max-w-sm rounded-lg"
+              />
+              <div>
+                <h1 class="text-5xl font-bold">Box Office News!</h1>
+                <p class="py-6 w-[440px]">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn text-white bg-primary-bg">Purchase</button>
+              </div>
+            </div>
+          </div>
+          <!-- <img
+            src="day18_images/slider/bike3.png"
+            class="w-full"
+          /> -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <div class="hero">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <img
+                src="day18_images/slider/bike4.png"
+                class="max-w-sm rounded-lg"
+              />
+              <div>
+                <h1 class="text-5xl font-bold">Box Office News!</h1>
+                <p class="py-6 w-[440px]">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn text-white bg-primary-bg">Purchase</button>
+              </div>
+            </div>
+          </div>
+          <!-- <img
+            src="day18_images/slider/bike4.png"
+            class="w-full"
+          /> -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="md:container md:mx-auto">
+      <!-- Latest Bikes -->
+      <section class="my-24">
+        <h3 class="text-4xl text-center mb-12 font-semibold">Latest Bikes</h3>
+        <div
+          class="grid grid-cols-1 px-8 md:px-0 lg:px-0 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center"
+        >
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img
+                class="bg-contain"
+                src="day18_images/others/latest1.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions justify-start">
+                <button class="btn bg-primary-bg">Purchase</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img src="day18_images/others/latest2.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions justify-start">
+                <button class="btn bg-primary-bg">Purchase</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img src="day18_images/others/latest3.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions justify-start">
+                <button class="btn bg-primary-bg">Purchase</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Feedback -->
+      <section class="my-24">
+        <h3 class="text-4xl text-center mb-12 font-semibold">
+          Happy <span class="text-[#E76F51]">Client Says</span>
+        </h3>
+        <div
+          class="grid grid-cols-1 p-4 lg:p-0 md:grid-cols-2 lg:grid-cols-3 gap-11"
+        >
+          <!-- First review -->
+          <div class="card p-9 bg-base-100 border border-gray-400">
+            <figure>
+              <img
+                class="w-36"
+                src="day18_images/others/user-1.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <p class="text-center">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <div class="rating justify-center">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <p
+                class="text-base space-y-2 text-center font-semibold text-[#23A6F0]"
+              >
+                Ragina Miles
+              </p>
+              <p class="text-base text-center font-semibold">Banker</p>
+            </div>
+          </div>
+          <!-- Second review -->
+          <div class="card p-9 bg-base-100 border border-gray-400">
+            <figure>
+              <img
+                class="w-36"
+                src="day18_images/others/user-2.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <p class="text-center">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <div class="rating justify-center">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <p
+                class="text-base space-y-2 text-center font-semibold text-[#23A6F0]"
+              >
+                Ragina Miles
+              </p>
+              <p class="text-base text-center font-semibold">Banker</p>
+            </div>
+          </div>
+          <!-- Third Review -->
+          <div class="card p-9 bg-base-100 border border-gray-400">
+            <figure>
+              <img
+                class="w-36"
+                src="day18_images/others/user-3.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <p class="text-center">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <div class="rating justify-center">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <p
+                class="text-base space-y-2 text-center font-semibold text-[#23A6F0]"
+              >
+                Ragina Miles
+              </p>
+              <p class="text-base text-center font-semibold">Banker</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ -->
+      <section>
+        <h3 class="text-4xl text-center font-semibold">
+          Frequently Asked <span class="text-[#E76F51]">Questions</span>
+        </h3>
+        <div class="hero min-h-screen ">
+          <div class="hero-content lg:gap-24 flex-col lg:flex-row">
+            <img class="w-1/3" src="day18_images/others/faq.png" />
+            <div class="space-y-2">
+              <div class="collapse collapse-arrow border">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">
+                  Click to open this one and close others
+                </div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                  Click to open this one and close others
+                </div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                  Click to open this one and close others
+                </div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
