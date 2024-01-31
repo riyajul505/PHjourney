@@ -76,8 +76,191 @@
 
 // practise problem
 
-let user = prompt("enter user name");
+// let user = prompt("enter user name");
 
-let output = `@${user}${user.length}`;
-console.log(output);
+// let output = `@${user}${user.length}`;
+// console.log(output);
 
+// Arrays
+// let heros = ['rahul','hulk','thor']
+
+// let marks = [96, 75, 48]
+
+// console.log(marks);
+// marks[0] = 1;
+// console.log(marks);
+
+// strings are immituable
+
+// for (let i of heros){
+//     console.log(i)
+// }
+
+// practise question
+
+// let sum = 0;
+// let marks = [85, 97, 44, 37, 76, 60];
+
+// for (let el of marks){
+//     sum += el
+// }
+// console.log(sum/marks.length)
+
+// let items = [250, 645, 300, 900, 50];
+
+// for (let i = 0; i < items.length; i++){
+//     items[i] = items[i] - ((items[i] * 10) / 100)
+// }
+
+// console.log(items)
+
+// let companies = ['bloomberg', 'microsoft', 'uber', 'google', 'ibm', 'netflix'];
+
+// companies.shift();
+// companies.splice(1,1,'ola');
+// companies.pop()
+// console.log(companies);
+
+
+// Functions
+
+// function print(value){
+//     console.log(value)
+// }
+
+// print('hello world');
+
+// arrow function
+// let arrowSum = (a, b) => {
+//     return a+b;
+// }
+
+// arrowSum(1,2) 
+
+// callback function
+
+// let arr = ['dhaka','borishal']
+
+// arr.forEach(function print(val){
+//     console.log(val)
+// } );
+
+// arr.forEach((val) => {
+//     console.log(val.toUpperCase())
+// });
+
+// let arr = [2,4,6,9]
+
+// arr.forEach((val, idx) => {
+//     console.log(val**2, idx)
+// })
+// DOM
+
+
+// Task 1
+// const colors = {
+//     red: "#ff0000",
+//     green: "#00ff00",
+//     blue: "#0000ff",
+//     "golden rod": '#daa520'
+// };
+
+// console.log(colors['golden rod'])
+
+// Task 2
+// const car = {
+//     make: "Toyota",
+//     model: "Corolla",
+//     year: 2020,
+// };
+
+// car['passenger capacity'] = 5;
+
+// console.log(car)
+
+// Task 3
+
+// const student = {
+//     name: "Hamim Sakep",
+//     id: 5421,
+//     physics: {
+//         subject: "HSC Physics",
+//         author: "Shahjahan Tapan",
+//         marks: 30
+//     }
+// };
+
+// console.log(student.physics.marks)
+
+// Task 4
+
+// let student = {
+//     name: 'Ariana Grande',
+//     age: 21,
+//     city: 'Gaibandha',
+//     isStudent: true
+// };
+
+// sum = 0;
+// for (const i in student){
+//     // console.log(student[i], i)
+//     sum++
+// }
+// console.log(sum)
+
+// Task 5
+
+// let myObject = {
+
+//     name: 'John Doe',
+//     age: 25,
+//     city: 'Example City',
+//     isStudent: true
+// };
+
+// for (const i in myObject){
+//     console.log(`key: ${i} | type: ${typeof (myObject[i])}`)
+// }
+
+
+// Task 1
+
+// const colors = ['red', 'blue', 'green', 'yellow', 'orange']
+
+// const revColors = []
+
+// for (const i of colors){
+//     revColors.unshift(i)
+// }
+
+// console.log(revColors)
+
+// Task 2
+
+// const numbers = [12, 98, 5, 41, 23, 78, 46];
+
+// for (let i of numbers){
+//     if (i%2==0){
+//         console.log(i)
+//     }
+// }
+//Task 3
+
+// var numbers = ['Tom', 'Tim', 'Tin', 'Tik'];
+
+// let str = "";
+
+// for (let i of numbers){
+//     str += i;
+// }
+// console.log(str)
+//Task 5
+// const statement = 'I am a hard working person';
+
+// const newArray = statement.split(' ')
+
+// let finalArray = '';
+// for (let i of newArray){
+//     finalArray = i +' '+ finalArray;
+// }
+// console.log(finalArray)
