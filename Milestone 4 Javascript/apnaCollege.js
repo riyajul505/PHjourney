@@ -265,3 +265,58 @@
 // }
 // console.log(finalArray)
 
+
+// for (var i = 0; i < 5; i++) {
+//     setTimeout(function () {
+//      console.log(i);
+//   }, 
+//   100);
+// }
+
+// function lol(a,b){
+//     console.log(a,b)
+// }
+
+// lol('lol')
+
+// js practise task 2
+
+// const employees = [
+//     { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+//     { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+//     { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+//     { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+// ];
+
+
+// function totalSalary(employees){
+//     total = 0;
+//     for (let i of employees){
+//         total += (i.experience * i.increment) + i.starting;
+//     }
+//     return total
+// }
+
+// console.log(totalSalary(employees))
+
+
+// Document object model [Apna College]
+
+// console.dir(document.head)
+// console.dir(document.body.childNodes[1])
+
+// document.body.childNodes[1].innerText = 'Lol'
+
+// selecting element with id
+// let heading= document.getElementById('heading');
+// console.dir(heading)
+
+// selecting element with class
+
+// let headings = document.getElementsByClassName('header');
+// console.dir(headings)
+// console.log(headings)
+
+// let elements = document.querySelector('.header');
+// console.dir(elements)
+
