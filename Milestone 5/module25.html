@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <!-- 
+    <h1 id="heading">Events in JS</h1>
+
+    <input id="input-field" type="text" name="" id="">
+    <br><br>
+    <button id="click-me-btn">click me</button> -->
+    <!-- <h1>Please leave your comment</h1>
+    <div id="all-comment">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vitae nulla tempora temporibus error magnam facilis, quibusdam aperiam quaerat corporis!</p>
+        <p>Doloribus totam magnam quia soluta autem, officiis amet nam similique nisi excepturi quisquam deleniti labore perferendis ipsa. Repellat, facilis. Assumenda.</p>
+        <p>Esse, ab accusantium eum facilis animi cupiditate qui, repellendus iste beatae deserunt voluptates soluta maxime illo rem minima magnam assumenda?</p>
+    </div>
+    <textarea name="" id="comment-area" cols="30" rows="5"></textarea><br>
+    <button id="post-btn">Post</button> -->
+    <!-- <h1 id="secret-info">My secret info</h1>
+    <button id="delet-btn" disabled>Delete</button>
+
+    <input type="text" id="input-field" placeholder="type delete" /> -->
+    <section id="list-container">
+      <h1 >Exploring Event Bubble</h1>
+      <ul id="items-list">
+        <li class="item">Lorem, ipsum.</li>
+        <li id="item-2" class="item">Ipsum, ipsam!</li>
+        <li class="item">Aliquam, delectus!</li>
+        <li class="item">Aspernatur, nobis!</li>
+        <li class="item">Vel, consequuntur?</li>
+        <li class="item">Veritatis, facere!</li>
+      </ul>
+      <button id="add-btn">Add item</button>
+
+    </section>
+
+    <script>
+      
+      document.getElementById('items-list').addEventListener('click',function(event){
+        event.target.parentNode.removeChild(event.target);
+      })
+
+      document.getElementById('add-btn').addEventListener('click',function(){
+        const li = document.createElement('li');
+        li.innerText = 'brand new item';
+        li.classList.add('item');
+        document.getElementById('items-list').appendChild(li);
+      })
+
+     
+      
+    </script>
+    <!-- <script>
+      document.getElementById('items-list').addEventListener('click', function(){
+        console.log('ul clicked')
+      })
+      document.getElementById('item-2').addEventListener('click',function(event){
+        console.log('item 2 clicked')
+        event.stopPropagation();
+      })
+      document.getElementById('list-container').addEventListener('click',function(){
+        console.log('section area clicked')
+      })
+    </script> -->
+    
+    <!-- <script>
+
+      document
+        .getElementById("input-field")
+        .addEventListener("keyup", function (event) {
+            const text = event.target.value;
+            if (text === 'delete'){
+                document.getElementById('delet-btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('delet-btn').setAttribute('disabled',true);
+            }
+        });
+     document.getElementById('delet-btn').addEventListener('click',function(){
+        document.getElementById('secret-info').style.display = 'none';
+     })
+    </script> -->
+  
+  
+  </body>
+</html>
