@@ -13,6 +13,19 @@ function recTiangleArea(){
     const lenght = parseFloat(document.getElementById('rectangle-length').value);
 
     const result = (width*lenght);
-    console.log(result)
+
     document.getElementById('rectangle-span').innerText = result;
 }
+
+function getValues(id){
+    return parseFloat((document.getElementById(id).value))
+}
+
+function ParallelogramArea(){
+    const base = getValues('Parallelogram-base');
+
+    const height = getValues('Parallelogram-height');
+
+    document.getElementById('Parallelogram-span').innerText = base*height;
+}
+
