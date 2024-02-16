@@ -98,3 +98,5 @@ function monthlySavings(arr , livingCost) {
     }
 }
 
+const savings = monthlySavings( 100, [ 900 , 2700 , 3400])
+console.log(savings)
