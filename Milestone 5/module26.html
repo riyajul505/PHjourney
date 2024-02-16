@@ -77,17 +77,29 @@
           </div>
           <!-- Parallelogram -->
           <div class="card card-compact w-auto bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
+            <figure><img src="images26/parallelogram.png" alt="triangle" /></figure>
             <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+              <h2 class="card-title flex justify-center items-center">
+                Parallelogram
+              </h2>
+              <p class="text-center">Area (A) = b × h</p>
+              <div class="flex gap-1 justify-center items-center">
+                <input id="Parallelogram-base"
+                  class="w-24 h-8 text-base text-center p-2 rounded-sm"
+                  type="text"
+                  placeholder="base"
+                />
+                <span class="text-xl">cm</span>
+                <input id="Parallelogram-height"
+                  type="text"
+                  class="w-24 h-8 text-base text-center p-2 rounded-sm"
+                  placeholder="height"
+                />
+                <span class="text-xl">cm</span>
+              </div>
+              <p>Total Area: <span id="Parallelogram-span"></span></p>
+              <div class="card-actions">
+                <button onclick="ParallelogramArea()" class="btn btn-primary w-full">Calculate</button>
               </div>
             </div>
           </div>
