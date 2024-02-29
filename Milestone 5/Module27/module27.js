@@ -8,6 +8,7 @@ function continueGame(){
 }
 
 function keyboardButtonEvent(event){
+    document.getElementById('lol')
     const playerPressed = event.key;
     const currentAlphabet = document.getElementById('current-alphabet').innerText;
 
