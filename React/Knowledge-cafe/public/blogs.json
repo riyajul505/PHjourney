@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "The Power of Positive Thinking",
+      "author": "John Doe",
+      "author_img": "./images/boy1.png",
+      "cover_img": "./images/1.jpg",
+      "posted_date": "2024-03-15",
+      "reading_time": 10,
+      "hashtag": ["positivity", "self-improvement", "mindfulness"]
+    },
+    {
+      "id": 2,
+      "title": "Exploring the Depths of Ocean Life",
+      "author": "Jane Smith",
+      "author_img": "./images/boy2.png",
+      "cover_img": "./images/2.png",
+      "posted_date": "2024-03-14",
+      "reading_time": 15,
+      "hashtag": ["oceanography", "marinebiology", "conservation"]
+    },
+    {
+      "id": 3,
+      "title": "The Art of Cooking: Mastering Culinary Skills",
+      "author": "Alex Johnson",
+      "author_img": "./images/girl1.jpg",
+      "cover_img": "./images/3.png",
+      "posted_date": "2024-03-13",
+      "reading_time": 20,
+      "hashtag": ["cooking", "food", "recipes"]
+    },
+    {
+      "id": 4,
+      "title": "Unlocking Creativity: Finding Inspiration Everywhere",
+      "author": "Emily Brown",
+      "author_img": "./images/girl2.jpg",
+      "cover_img": "./images/4.jpg",
+      "posted_date": "2024-03-12",
+      "reading_time": 12,
+      "hashtag": ["creativity", "inspiration", "art"]
+    }
+  ]
+  
