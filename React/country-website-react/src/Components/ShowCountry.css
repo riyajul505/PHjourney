@@ -1,0 +1,17 @@
+.box {
+  border: 2px solid tomato;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  
+}
+
+.country-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.visited {
+  background-color: aqua;
+}
