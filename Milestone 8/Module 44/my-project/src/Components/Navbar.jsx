@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { MdRestaurantMenu } from "react-icons/md";
-
+import LineChart from "./LineChart";
 import Link from "./Link";
 
 const Navbar = () => {
@@ -14,19 +14,27 @@ const Navbar = () => {
     { id: 5, path: "/products", name: "Products" },
   ];
   return (
-    <nav>
-      <div className="md:hidden text-2xl" onClick={()=> setOpen(!open)}>
-        {
-            open === true ? <MdRestaurantMenu></MdRestaurantMenu> : <CiMenuFries></CiMenuFries>
-        }
-        
-      </div>
-      <ul className={`md:flex md:static ${open? 'top-6':'-top-60'} duration-1000 absolute`}>
-        {routes.map((routes) => (
-          <Link key={routes.id} routes={routes}></Link>
-        ))}
-      </ul>
-    </nav>
+    <div>
+      <nav>
+        <div className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
+          {open === true ? (
+            <MdRestaurantMenu></MdRestaurantMenu>
+          ) : (
+            <CiMenuFries></CiMenuFries>
+          )}
+        </div>
+        <ul
+          className={`md:flex md:static ${
+            open ? "top-6" : "-top-60"
+          } duration-1000 absolute`}
+        >
+          {routes.map((routes) => (
+            <Link key={routes.id} routes={routes}></Link>
+          ))}
+        </ul>
+      </nav>
+      <LineChart></LineChart>
+    </div>
   );
 };
 
