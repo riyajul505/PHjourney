@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "picture": "image1.jpg",
+        "title": "Vintage Leather Bag",
+        "category": "Bags",
+        "category_bg": "#FF5733",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#5D6D7E",
+        "description": "A classic vintage leather bag, perfect for everyday use.",
+        "price": "$49.99"
+    },
+    {
+        "id": 2,
+        "picture": "image2.jpg",
+        "title": "Sleek Silver Watch",
+        "category": "Watches",
+        "category_bg": "#1ABC9C",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#2E86C1",
+        "description": "An elegant silver watch that adds sophistication to any outfit.",
+        "price": "$89.99"
+    },
+    {
+        "id": 3,
+        "picture": "image3.jpg",
+        "title": "Cozy Knit Sweater",
+        "category": "Clothing",
+        "category_bg": "#F39C12",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#CB4335",
+        "description": "Stay warm and stylish with this soft knit sweater.",
+        "price": "$39.99"
+    },
+    {
+        "id": 4,
+        "picture": "image4.jpg",
+        "title": "Retro Sunglasses",
+        "category": "Accessories",
+        "category_bg": "#8E44AD",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#7D3C98",
+        "description": "Make a statement with these cool retro sunglasses.",
+        "price": "$19.99"
+    },
+    {
+        "id": 5,
+        "picture": "image5.jpg",
+        "title": "Handcrafted Ceramic Mug",
+        "category": "Home Decor",
+        "category_bg": "#3498DB",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#117A65",
+        "description": "Enjoy your morning coffee in style with this unique ceramic mug.",
+        "price": "$14.99"
+    },
+    {
+        "id": 6,
+        "picture": "image6.jpg",
+        "title": "Gourmet Chocolate Box",
+        "category": "Food & Beverage",
+        "category_bg": "#D35400",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#196F3D",
+        "description": "Indulge in delicious gourmet chocolates for a sweet treat.",
+        "price": "$29.99"
+    },
+    {
+        "id": 7,
+        "picture": "image7.jpg",
+        "title": "Travel Backpack",
+        "category": "Travel Gear",
+        "category_bg": "#2ECC71",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#8E44AD",
+        "description": "Explore the world with this durable and functional travel backpack.",
+        "price": "$69.99"
+    },
+    {
+        "id": 8,
+        "picture": "image8.jpg",
+        "title": "Fitness Tracker",
+        "category": "Fitness & Health",
+        "category_bg": "#27AE60",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#F4D03F",
+        "description": "Keep track of your fitness goals with this sleek fitness tracker.",
+        "price": "$79.99"
+    },
+    {
+        "id": 9,
+        "picture": "image9.jpg",
+        "title": "Smartphone Stand",
+        "category": "Electronics",
+        "category_bg": "#34495E",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#9B59B6",
+        "description": "Conveniently watch movies or video call hands-free with this smartphone stand.",
+        "price": "$9.99"
+    },
+    {
+        "id": 10,
+        "picture": "image10.jpg",
+        "title": "Aromatherapy Diffuser",
+        "category": "Wellness",
+        "category_bg": "#E74C3C",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#5D6D7E",
+        "description": "Create a calming atmosphere with this aromatherapy diffuser.",
+        "price": "$34.99"
+    },
+    {
+        "id": 11,
+        "picture": "image11.jpg",
+        "title": "Leather Wallet",
+        "category": "Accessories",
+        "category_bg": "#8E44AD",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#7D3C98",
+        "description": "Organize your cards and cash in style with this genuine leather wallet.",
+        "price": "$49.99"
+    },
+    {
+        "id": 12,
+        "picture": "image12.jpg",
+        "title": "Stainless Steel Water Bottle",
+        "category": "Fitness & Health",
+        "category_bg": "#27AE60",
+        "card_bg": "#F9EBEA",
+        "text_button_bg": "#F4D03F",
+        "description": "Stay hydrated on the go with this durable stainless steel water bottle.",
+        "price": "$19.99"
+    }
+]
