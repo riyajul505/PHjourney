@@ -1,6 +1,6 @@
 import { InputWithButton } from "./InputWithButton";
 
-const Banner = () => {
+const Banner = ({setValue}) => {
   return (
     <div
       className="hero min-h-[80vh] rounded-2xl"
@@ -13,7 +13,7 @@ const Banner = () => {
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-          <InputWithButton/>
+          <InputWithButton setValue={setValue}/>
         </div>
       </div>
     </div>

@@ -5,6 +5,8 @@ import Home from "../Pages/Home/Home";
 import DonationDetails from "../Pages/Dynamic Pages/DonationDetails";
 import Donation from "../Pages/Donation/Donation";
 
+import Statistics from "../Pages/Statistics/Statistics";
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/statistics",
-          element: <h1>Statistics</h1>,
+          element: <Statistics/>,
         },
         {
           path: "*",
