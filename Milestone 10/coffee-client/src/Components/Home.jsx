@@ -4,21 +4,21 @@ const Home = () => {
   const [coffees, setCoffees] = useState([]);
   const deleteItem = (_id) => {
     console.log(_id);
-    fetch(`https://coffee-server-seven-gilt.vercel.app/deleteCoffee/${_id}`, {
+    fetch(`http://localhost:5000/deleteCoffee/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         if (data.deletedCount > 0) {
-          fetch("https://coffee-server-seven-gilt.vercel.app/coffees")
+          fetch("http://localhost:5000/coffees")
             .then((res) => res.json())
             .then((data) => setCoffees(data));
         }
       });
   };
   useEffect(() => {
-    fetch("https://coffee-server-seven-gilt.vercel.app/coffees")
+    fetch("http://localhost:5000/coffees")
       .then((res) => res.json())
       .then((data) => setCoffees(data));
   }, []);

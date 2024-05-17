@@ -8,7 +8,7 @@ const AddCoffee = () => {
     const url = e.target.url.value;
     const coffee = { name, quantity, url };
     fetch(
-      "https://coffee-server-seven-gilt.vercel.app/addCoffee",
+      "http://localhost:5000/addCoffee",
       {
         method: "POST",
         headers: {
