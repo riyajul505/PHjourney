@@ -1,9 +1,9 @@
+import { Rating } from '@smastrom/react-rating';
 import React, { useEffect, useState } from "react";
-import SectionTitle from "../../Components/SectionTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Rating } from '@smastrom/react-rating'
+import SectionTitle from "../../Components/SectionTitle";
 
-import '@smastrom/react-rating/style.css'
+import '@smastrom/react-rating/style.css';
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,7 +13,7 @@ import { Navigation } from "swiper/modules";
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("reviews.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
