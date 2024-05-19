@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
+    const {createUser} = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -8,7 +11,9 @@ const Register = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    
+    createUser(data.email, data.password)
+    .then(result => console.log(result.user))
   };
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -54,11 +59,13 @@ const Register = () => {
               <input
                 type="password"
                 placeholder="password"
-                {...register("password", {required:true, minLength: 6, maxLength: 8})}
+                {...register("password", {required:true, 
+                    pattern: /(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{7,}/
+                })}
                 className="input input-bordered"
                 
               />
-              {errors.password && <span>Min and Max 6-8</span>}
+              {errors.password?.type ==='pattern' && <p className="text-red-600">one digit , one lower case, one upper case, least 8 from the mentioned characters</p>}
               <label className="label">
                 <a href="login" className="label-text-alt link link-hover">
                   Already have an account? Login
@@ -66,7 +73,7 @@ const Register = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Sign Up</button>
+                <input className="btn btn-primary" type="submit" value="Sign Up" />
             </div>
           </form>
         </div>
