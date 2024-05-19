@@ -3,8 +3,10 @@ import {
 } from "react-router-dom";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home/Home";
+import Login from '../Pages/Login/Login';
 import Order from '../Pages/Order/Order';
 import OurMenu from "../Pages/OurMenu/OurMenu";
+import Register from "../Pages/Register/Register";
 
 
 const router = createBrowserRouter([
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
         {
           path: '/order/:category',
           element: <Order/>,
+        },
+        {
+          path: '/login',
+          element: <Login/>
+        },
+        {
+          path: '/register',
+          element: <Register/>
         }
       ]
     },
