@@ -1,19 +1,29 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
+    reset,
     watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    
-    createUser(data.email, data.password)
-    .then(result => console.log(result.user))
+    createUser(data.email, data.password).then(() => {
+      updateUserProfile(data.name).then(() => {
+        Swal.fire("Register Successfully");
+        navigate(from);
+        reset();
+      });
+    });
   };
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -59,13 +69,18 @@ const Register = () => {
               <input
                 type="password"
                 placeholder="password"
-                {...register("password", {required:true, 
-                    pattern: /(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{7,}/
+                {...register("password", {
+                  required: true,
+                  pattern: /(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{7,}/,
                 })}
                 className="input input-bordered"
-                
               />
-              {errors.password?.type ==='pattern' && <p className="text-red-600">one digit , one lower case, one upper case, least 8 from the mentioned characters</p>}
+              {errors.password?.type === "pattern" && (
+                <p className="text-red-600">
+                  one digit , one lower case, one upper case, least 8 from the
+                  mentioned characters
+                </p>
+              )}
               <label className="label">
                 <a href="login" className="label-text-alt link link-hover">
                   Already have an account? Login
@@ -73,7 +88,11 @@ const Register = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-                <input className="btn btn-primary" type="submit" value="Sign Up" />
+              <input
+                className="btn btn-primary"
+                type="submit"
+                value="Sign Up"
+              />
             </div>
           </form>
         </div>

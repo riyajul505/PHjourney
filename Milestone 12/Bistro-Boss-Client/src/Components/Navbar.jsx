@@ -1,23 +1,52 @@
+import { useContext } from "react";
+import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import useCart from "../Hooks/useCart";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const [cart] = useCart();
+  const { user, logOut, loading } = useContext(AuthContext);
+  if (loading) {
+    return "loading pppp";
+  }
+  const handleLogOut = () => {
+    logOut().then().catch();
+  };
   const navLinks = (
     <>
       <li>
-        <Link to={'/our-menu'}>Menu</Link>
+        <Link to={"/our-menu"}>Menu</Link>
       </li>
       <li>
-        <Link to={'/'} >Home</Link>
+        <Link to={"/"}>Home</Link>
       </li>
       <li>
-        <Link to={'/order/salad'} >Order</Link>
+        <Link to={"/order/salad"}>Order</Link>
       </li>
-      <li>
-        <Link to={'/login'} >Login</Link>
-      </li>
-      <li>
+
+      {/* <li>
         <Link to={'/register'} >Sign Up</Link>
-      </li>
+      </li> */}
+      {user ? (
+        <>
+          <li>
+            <Link onClick={handleLogOut}>Log Out</Link>
+          </li>
+          <li>
+            <Link to={'/dashboard'}><button className="btn">
+              <FaShoppingCart/>
+              <div className="badge badge-secondary">+{cart.length}</div>
+            </button></Link>
+          </li>
+        </>
+      ) : (
+        <>
+          <li>
+            <Link to={"/login"}>Login</Link>
+          </li>
+        </>
+      )}
     </>
   );
   return (
@@ -50,9 +79,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">Bistro Boss</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navLinks}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
