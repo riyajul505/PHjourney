@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -49,6 +49,12 @@ async function run() {
     app.get('/cart', async(req, res)=>{
       const email = req.query.email;
       const result = await cartCollection.find({email:email}).toArray();
+      res.send(result);
+    })
+    app.delete('/cart/:id', async(req, res)=>{
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id)}
+      const result = await cartCollection.deleteOne(query);
       res.send(result);
     })
 
