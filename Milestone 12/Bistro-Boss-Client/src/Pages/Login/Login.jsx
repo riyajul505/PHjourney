@@ -6,6 +6,7 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import Swal from "sweetalert2";
+import SocialLogin from "../../Components/SocialLogin";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
@@ -74,6 +75,7 @@ const Login = () => {
                 required
               />
             </div>
+            
             <div className="form-control">
               <label className="label">
                 <LoadCanvasTemplate />
@@ -86,17 +88,20 @@ const Login = () => {
                 className="input input-bordered"
               />
               {/* <input type="submit"  className='btn btn-primary btn-xs mt-2' value="Validate Captcha" /> */}
+              <SocialLogin/>
               <label className="label">
                 <a href="register" className="label-text-alt link link-hover">
                   New To this website? Register
                 </a>
               </label>
+
             </div>
             <div className="form-control mt-6">
               <button disabled={false} className="btn btn-primary">
                 Login
               </button>
             </div>
+            
           </form>
         </div>
       </div>

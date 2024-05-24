@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import SocialLogin from "../../Components/SocialLogin";
 
 const Register = () => {
+  const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -19,9 +22,17 @@ const Register = () => {
   const onSubmit = (data) => {
     createUser(data.email, data.password).then(() => {
       updateUserProfile(data.name).then(() => {
-        Swal.fire("Register Successfully");
-        navigate(from);
-        reset();
+        const userInfo = {
+          name: data.name,
+          email: data.email,
+        };
+        axiosPublic.post("/users", userInfo).then((res) => {
+          if (res.data.insertedId) {
+            Swal.fire("Register Successfully");
+            navigate(from);
+            reset();
+          }
+        });
       });
     });
   };
@@ -86,6 +97,7 @@ const Register = () => {
                   Already have an account? Login
                 </a>
               </label>
+              <SocialLogin/>
             </div>
             <div className="form-control mt-6">
               <input
