@@ -1,11 +1,14 @@
 import React from "react";
+import { BiFork } from "react-icons/bi";
 import {
   FaAddressBook,
+  FaBookOpen,
   FaCalendar,
   FaEnvelope,
   FaHome,
   FaList,
   FaMoneyBill,
+  FaUser
 } from "react-icons/fa";
 import { FaCalendarCheck, FaCartShopping } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
@@ -18,37 +21,70 @@ const DashBoard = () => {
     <div className="flex">
       <div className="w-64 min-h-screen bg-orange-400 px-4">
         <ul className="menu space-y-5 mt-2">
-          <li>
-            <NavLink to={"/dashboard/userHome"}>
-              <FaHome /> User Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/dashboard/payment-history"}>
-              <FaMoneyBill /> Payment History
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/dashboard/reservation"}>
-              <FaCalendar /> Reservation
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/dashboard/cart"}>
-              <FaCartShopping /> My Cart ({cart.length})
-            </NavLink>
-          </li>
+          {isAdmin ? (
+            <>
+              <li>
+                <NavLink to={"/dashboard/admin-home"}>
+                  <FaHome /> Admin Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/add-items"}>
+                  <BiFork /> Add Items
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/manage-items"}>
+                  <FaList /> Manage Items
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/manage-bookings"}>
+                  <FaBookOpen /> Manage Bookings
+                </NavLink>
+              </li>
 
-          <li>
-            <NavLink to={"/dashboard/add-review"}>
-              <FaAddressBook /> Add Review
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/dashboard/my-bookings"}>
-              <FaCalendarCheck /> My Booking
-            </NavLink>
-          </li>
+              <li>
+                <NavLink to={"/dashboard/users"}>
+                  <FaUser /> ALL Users
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <NavLink to={"/dashboard/userHome"}>
+                  <FaHome /> User Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/payment-history"}>
+                  <FaMoneyBill /> Payment History
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/reservation"}>
+                  <FaCalendar /> Reservation
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/cart"}>
+                  <FaCartShopping /> My Cart ({cart.length})
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to={"/dashboard/add-review"}>
+                  <FaAddressBook /> Add Review
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/my-bookings"}>
+                  <FaCalendarCheck /> My Booking
+                </NavLink>
+              </li>
+            </>
+          )}
 
           <div className="divider"></div>
 
