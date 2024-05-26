@@ -1,4 +1,3 @@
-import React from "react";
 import { BiFork } from "react-icons/bi";
 import {
   FaAddressBook,
@@ -13,10 +12,11 @@ import {
 import { FaCalendarCheck, FaCartShopping } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../../../Hooks/useCart";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const DashBoard = () => {
   const [cart] = useCart();
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
     <div className="flex">
       <div className="w-64 min-h-screen bg-orange-400 px-4">
