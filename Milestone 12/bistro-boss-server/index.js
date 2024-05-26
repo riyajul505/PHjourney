@@ -40,10 +40,10 @@ async function run() {
       res.send({ token });
     });
 
-    // Verify toke
+    // Verify token
     const verifyToken = (req, res, next) => {
       if (!req.headers.authorization) {
-        return res.status(401).send({ message: "forbidden access" });
+        return res.status(401).send({ message: "unauthorized access" });
       }
       const token = req.headers.authorization.split(" ")[1];
       jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
@@ -54,8 +54,19 @@ async function run() {
         next();
       });
     };
+    // verify Admin
+    const verifyAdmin = async (req, res, next) =>{
+      const email = req.decoded.email;
+      const query = {email: email};
+      const user = await usersCollection.findOne(query);
+      const isAdmin = user?.role == 'Admin';
+      if(!isAdmin){
+        return res.status(403).send({message: 'forbidden access'})
+      }
+      next();
+    }
     // check if this email is admin or not
-    app.get("/users/admin/:email", verifyToken, async (req, res) => {
+    app.get("/users/admin/:email", verifyToken, verifyAdmin, async (req, res) => {
       const email = req.params.email;
       if (email !== req.decoded.email) {
         return res.status(403).send({ message: "forbidden access" });
@@ -69,12 +80,12 @@ async function run() {
       res.send({ admin });
     });
     // user api
-    app.get("/users", verifyToken, async (req, res) => {
+    app.get("/users", verifyToken, verifyAdmin, async (req, res) => {
       console.log(req.headers);
       const result = await usersCollection.find().toArray();
       res.send(result);
     });
-    app.delete("/users/:id", async (req, res) => {
+    app.delete("/users/:id",verifyToken, verifyAdmin, async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await usersCollection.deleteOne(query);
