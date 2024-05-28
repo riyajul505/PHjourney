@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useAdmin from "../Hooks/useAdmin";
 import useCart from "../Hooks/useCart";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
   const [cart] = useCart();
+
   const { user, logOut, loading } = useContext(AuthContext);
   if (loading) {
     return "loading pppp";
@@ -34,10 +36,12 @@ const Navbar = () => {
             <Link onClick={handleLogOut}>Log Out</Link>
           </li>
           <li>
-            <Link to={'/dashboard/cart'}><button className="btn">
-              <FaShoppingCart/>
-              <div className="badge badge-secondary">+{cart.length}</div>
-            </button></Link>
+            <Link to={"/dashboard/cart"}>
+              <button className="btn">
+                <FaShoppingCart />
+                <div className="badge badge-secondary">+{cart.length}</div>
+              </button>
+            </Link>
           </li>
         </>
       ) : (
